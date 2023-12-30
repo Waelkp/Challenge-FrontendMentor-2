@@ -178,8 +178,23 @@ body {
   transition: 0.6s;
   cursor: pointer;
 }
+.card .summary .btn:active {
+  outline: none;
+  background-color: none;
+}
+.card .summary .btn:focus {
+  outline: none;
+  background-color: none;
+}
 .card .summary .btn:hover {
   background-color: var(--Lightroyalblue-BG);
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 @media (max-width: 866px) {
   body {
