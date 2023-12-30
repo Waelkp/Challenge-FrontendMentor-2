@@ -1,0 +1,204 @@
+:root {
+  /* Start Colors */
+  /* ### Primary */
+  --POrangey-yellow: rgb(255, 176, 31);
+  --PGreen-teal: hsl(166, 100%, 37%);
+  --PCobalt-blue: hsl(234, 85%, 45%);
+  /* ## Gradients */
+  --Lightslateblue-BG: hsl(252, 100%, 67%);
+  --Lightroyalblue-BG: hsl(241, 81%, 54%);
+  --Violet-blue-CIrcle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-CIrcle: hsla(241, 72%, 46%, 0);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  /* End Colors */
+  /* Start Font  */
+  --FontSizeP: 18px;
+  --FontFamily: "Hanken Grotesk", sans-serif;
+  /* End Font  */
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--FontFamily);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* Start Challeng */
+#black {
+  color: black;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 45px;
+  width: 850px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  transform: scale(0.9);
+}
+
+/* Start Blue Side  */
+.card .result {
+  flex: 1;
+
+  background-image: linear-gradient(
+    180deg,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%),
+    hsla(256, 72%, 46%, 1)
+  );
+  padding: 30px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 45px;
+}
+
+.card .result h3 {
+  color: var(--White);
+  font-size: 30px;
+  word-spacing: 6px;
+  margin: 0;
+  color: var(--Light-lavender);
+}
+.card .result .ci {
+  margin: 40px auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--Persian-blue-CIrcle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    180deg,
+    hsla(256, 72%, 46%, 1) 40%,
+    transparent
+  );
+  color: var(--White);
+}
+.card .result .ci > span:first-child {
+  font-size: 100px;
+}
+.card .result .ci > span:last-child {
+  color: var(--Lightslateblue-BG);
+  font-size: 18px;
+}
+.card .result .text {
+}
+.card .result .text h3 {
+  color: white;
+}
+.card .result .text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--Light-lavender);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Blue Side  */
+.card .summary {
+  flex: 1;
+  padding: 30px 60px;
+  border-radius: 45px;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.card .summary h3 {
+  font-size: 30px;
+  margin: 0;
+  color: var(--Dark-gray-blue);
+}
+.card .summary > .lines {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 40px 0;
+}
+.card .summary .lines .one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.card .summary .lines .one img {
+  padding: 20px 10px;
+  padding-left: 10px;
+}
+.card .summary .lines .one p {
+  flex: 1;
+}
+.card .summary .lines .one span {
+  color: gray;
+  margin-right: 12px;
+}
+.card .summary .lines .one span span {
+  margin-right: 10px;
+}
+.card .summary .lines .one-1 {
+  color: #ff5555;
+  background-color: rgb(255 85 85 / 15%);
+}
+.card .summary .lines .two {
+  color: var(--POrangey-yellow);
+  background-color: rgb(255 176 31 / 15%);
+}
+.card .summary .lines .three {
+  color: var(--PGreen-teal);
+  background-color: hsl(166deg 100% 37% / 15%);
+}
+.card .summary .lines .four {
+  color: var(--PCobalt-blue);
+  background-color: hsl(234deg 85% 45% / 15%);
+}
+.card .summary .btn {
+  padding: 18px;
+  border: none;
+  border-radius: 40px;
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--Dark-gray-blue);
+  transition: 0.6s;
+  cursor: pointer;
+}
+.card .summary .btn:hover {
+  background-color: var(--Lightroyalblue-BG);
+}
+@media (max-width: 866px) {
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  .card {
+    flex-direction: column;
+    transform: none;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    box-shadow: none;
+  }
+  .card .result {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .card .summary {
+    padding: 30px;
+  }
+}
+/* End Challeng */
