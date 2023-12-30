@@ -197,6 +197,9 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 @media (max-width: 866px) {
+    *::selection {
+    background-color: transparent;
+  }
   body {
     height: 100%;
     margin: 0;
